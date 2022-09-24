@@ -10,7 +10,7 @@ namespace ShoppingList
             string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
             // Add services to the container.
-            builder.Services.AddDbContext<AppContext>(options => options.UseSqlServer(connection));
+            builder.Services.AddDbContext<Models.AppContext>(options => options.UseSqlServer(connection));
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

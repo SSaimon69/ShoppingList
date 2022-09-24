@@ -8,17 +8,15 @@ namespace ShoppingList.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        Models.AppContext db;
+
+        public HomeController(Models.AppContext context, ILogger<HomeController> logger)
         {
+            db = context;
             _logger = logger;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
