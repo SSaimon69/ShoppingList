@@ -23,7 +23,19 @@ namespace ShoppingList.Controllers
             //db.categories.Add(new Category { Name = "Продукты" });
             //db.purchases.Add(new Purchase { ProductList = new List<Product>{ new Product { CategoryID = 1, Name = "Булка", Price = 156, PurchaseId = 1 } }, ShopID = 1, Time = DateTime.Now });
             //db.SaveChanges();
-            return View();
+
+            //db.purchases.First().ProductList = db.products.Join(db.purchases,
+            //    a => a.PurchaseId,
+            //    b => b.Id,
+            //    (a, b) => new Product 
+            //    {
+            //        Name = a.Name, 
+            //        Price = a.Price, 
+            //        PurchaseId = b.Id 
+            //    }).ToList(); 
+
+            //var a = db.purchases.First();
+            return View(db.purchases.First());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
