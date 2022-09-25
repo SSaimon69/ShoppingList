@@ -10,6 +10,7 @@ namespace ShoppingList.Controllers
 
         Models.AppContext db;
 
+
         public HomeController(Models.AppContext context, ILogger<HomeController> logger)
         {
             db = context;
@@ -18,6 +19,10 @@ namespace ShoppingList.Controllers
 
         public IActionResult Index()
         {
+            //db.shops.Add(new Shop { Name = "Пятерочка" });
+            //db.categories.Add(new Category { Name = "Продукты" });
+            //db.purchases.Add(new Purchase { ProductList = new List<Product>{ new Product { CategoryID = 1, Name = "Булка", Price = 156, PurchaseId = 1 } }, ShopID = 1, Time = DateTime.Now });
+            //db.SaveChanges();
             return View();
         }
 

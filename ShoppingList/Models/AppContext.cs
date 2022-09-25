@@ -4,7 +4,9 @@ namespace ShoppingList.Models
 {
     public class AppContext : DbContext
     {
-        List<Purchase> purchases { get; set; } = null!;
+        public DbSet<Purchase> purchases { get; set; } = null!;
+        public DbSet<Shop> shops { get; set; } = null!;
+        public DbSet<Category> categories { get; set; } = null!;
         public AppContext(DbContextOptions options) :base(options)
         {
             Database.EnsureCreated();
