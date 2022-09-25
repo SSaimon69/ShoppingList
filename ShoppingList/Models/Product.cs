@@ -7,5 +7,6 @@
         public int CategoryID { get; set; }
         public decimal Price { get; set; }
         public int PurchaseId { get; set; }
+        public Purchase? purchase { get; set; }
     }
 }

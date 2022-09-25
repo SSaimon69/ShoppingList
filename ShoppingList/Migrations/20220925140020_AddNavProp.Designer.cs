@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingList.Models;
 
@@ -11,9 +12,10 @@ using ShoppingList.Models;
 namespace ShoppingList.Migrations
 {
     [DbContext(typeof(Models.AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20220925140020_AddNavProp")]
+    partial class AddNavProp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace ShoppingList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("categories");
                 });
 
             modelBuilder.Entity("ShoppingList.Models.Product", b =>
@@ -64,7 +66,7 @@ namespace ShoppingList.Migrations
 
                     b.HasIndex("PurchaseId");
 
-                    b.ToTable("Products");
+                    b.ToTable("products");
                 });
 
             modelBuilder.Entity("ShoppingList.Models.Purchase", b =>
@@ -83,7 +85,7 @@ namespace ShoppingList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Purchases");
+                    b.ToTable("purchases");
                 });
 
             modelBuilder.Entity("ShoppingList.Models.Shop", b =>
@@ -100,7 +102,7 @@ namespace ShoppingList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shops");
+                    b.ToTable("shops");
                 });
 
             modelBuilder.Entity("ShoppingList.Models.Product", b =>

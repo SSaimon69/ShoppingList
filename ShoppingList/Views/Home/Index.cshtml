@@ -2,5 +2,11 @@
 
 <div class="text-center">
     <h1 class="display-4">This is your shopping list</h1>
-    <h3>Ты сделал покупку в @Model.Time.Hour часов и купил @Model.ProductList.First().Name по цене @Model.ProductList.First().Price рублей</h3>
+    <h3>Ты сделал @Model.ProductList.Count покупок в @Model.Time.Hour часов и вот что ты купил</h3>
 </div>
+<ul>
+@foreach (var product in Model.ProductList)
+{
+    <li>@product.Name по цене @product.Price рублей</li>
+}
+</ul>
