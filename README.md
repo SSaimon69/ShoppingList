@@ -1,5 +1,6 @@
 # ShoppingList
-Мой первый полноценный pet-проект. Используется ASP.NET Core MVC + Entity Framework + MS Sql Server 
+Мой первый полноценный pet-проект. Используется ASP.NET Core MVC + Entity Framework + MS Sql Server
+
 Планируется:
 - Возможность вести список покупок
 - Добавление покупок как вручную так и через QR
